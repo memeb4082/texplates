@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{custombook}[2014/08/16 Example LaTeX class]
 
+\LoadClass[oneside,12pt]{book}
 % Define your commands
 \newcommand{\unitname}[1]{\def\@unitname{#1}}
 \newcommand{\unitcode}[1]{\def\@unitcode{#1}}
@@ -11,7 +12,6 @@
 \RequirePackage{geometry}
 \RequirePackage{parskip}
 \RequirePackage{float}
-\RequirePackage{subcaption}
 \RequirePackage{fancyhdr}
 \RequirePackage{lastpage}
 \RequirePackage{graphicx}
@@ -22,7 +22,6 @@
 \RequirePackage{booktabs}
 \RequirePackage{listings}
 \RequirePackage[hidelinks]{hyperref}
-\LoadClass[oneside,12pt]{book}
 \geometry{a4paper, left=20mm,right=20mm,top=20mm,bottom=20mm}
 
 % Define the custom title page
