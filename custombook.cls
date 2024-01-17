@@ -5,7 +5,7 @@
 \newcommand{\unitname}[1]{\def\@unitname{#1}}
 \newcommand{\unitcode}[1]{\def\@unitcode{#1}}
 \newcommand{\unitcoordinator}[1]{\def\@unitcoordinator{#1}}
-
+\RequirePackage{subcaption}
 \RequirePackage{glossaries}
 \RequirePackage{derivative}
 \RequirePackage{geometry}
