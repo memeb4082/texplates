@@ -1,7 +1,8 @@
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{custombook}[2014/08/16 Example LaTeX class]
 
-\LoadClass[oneside]{book}
+\LoadClass[oneside,12pt]{book}
 % Define your commands
 \newcommand{\unitname}[1]{\def\@unitname{#1}}
 \newcommand{\unitcode}[1]{\def\@unitcode{#1}}
@@ -22,11 +23,12 @@
 \RequirePackage{booktabs}
 \RequirePackage{listings}
 \RequirePackage[hidelinks]{hyperref}
-\geometry{a4paper, left=20mm,right=20mm,top=20mm,bottom=20mm}
+\geometry{a4paper, left=10mm,right=10mm,top=15mm,bottom=15mm}
 
 % Define the custom title page
 \renewcommand{\maketitle}{
     \begin{titlepage}
+        \vspace*{\fill} % Push everything to the top
         \begin{flushleft}
             Queensland University of Technology\\
             \rule{\linewidth}{0.5pt}
@@ -40,6 +42,7 @@
         \@author\\
         \vspace{0.6cm}
         \today
+        \vspace{\fill} % Push everything to the bottom
     \end{titlepage}
 }
 \setcounter{secnumdepth}{6}
