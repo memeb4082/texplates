@@ -1,6 +1,5 @@
-
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{custombook}[2014/08/16 Example LaTeX class]
+\ProvidesClass{tutorial}[2014/08/16 Example LaTeX class]
 
 \LoadClass[oneside,12pt]{book}
 % Define your commands
@@ -22,27 +21,26 @@
 \RequirePackage{amssymb}
 \RequirePackage{booktabs}
 \RequirePackage{listings}
+\RequirePackage{inconsolata}
 \RequirePackage[hidelinks]{hyperref}
-\geometry{a4paper, left=10mm,right=10mm,top=15mm,bottom=15mm}
+\geometry{a4paper, left=15mm,right=15mm,top=20mm,bottom=20mm}
 
 % Define the custom title page
 \renewcommand{\maketitle}{
     \begin{titlepage}
-        \vspace*{\fill} % Push everything to the top
-        \begin{flushleft}
-            Queensland University of Technology\\
-            \rule{\linewidth}{0.5pt}
-        \end{flushleft}
-        \centering
-        \Large{\textbf{\@unitcode}}\\
-        \Large{\@unitname}
-        \rule{\linewidth}{2pt}\\
-        \small{\textit{\@unitcoordinator}}\\
-        \vspace{1cm}
-        \@author\\
-        \vspace{0.6cm}
-        \today
-        \vspace{\fill} % Push everything to the bottom
+        \begin{minipage}{0.5\linewidth}
+            \begin{flushleft}
+                \includegraphics[height=0.08\textheight]{logo.png}
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}{0.5\linewidth}
+            \begin{flushright}
+                \Large{\@unitcode}\\
+                \Large{\@unitname}
+            \end{flushright}
+        \end{minipage}\\
+        \vspace{0.01\textheight}
+        \hrule
     \end{titlepage}
 }
 \setcounter{secnumdepth}{6}
