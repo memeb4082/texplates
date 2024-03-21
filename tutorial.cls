@@ -23,7 +23,7 @@
 \RequirePackage{listings}
 \RequirePackage{inconsolata}
 \RequirePackage[hidelinks]{hyperref}
-\geometry{a4paper, left=15mm,right=15mm,top=20mm,bottom=20mm}
+\geometry{a4paper, left=15mm,right=15mm,top=15mm,bottom=15mm}
 
 % Define the custom title page
 \renewcommand{\maketitle}{
