@@ -27,7 +27,6 @@
 
 % Define the custom title page
 \renewcommand{\maketitle}{
-    \begin{titlepage}
         \begin{minipage}{0.5\linewidth}
             \begin{flushleft}
                 \includegraphics[height=0.08\textheight]{logo.png}
@@ -41,7 +40,6 @@
         \end{minipage}\\
         \vspace{0.01\textheight}
         \hrule
-    \end{titlepage}
 }
 \setcounter{secnumdepth}{6}
 \setcounter{tocdepth}{5}
