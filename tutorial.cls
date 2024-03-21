@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{tutorial}[2014/08/16 Example LaTeX class]
 
-\LoadClass[oneside,12pt]{article}
+\LoadClass[12pt]{article}
 % Define your commands
 \newcommand{\unitname}[1]{\def\@unitname{#1}}
 \newcommand{\unitcode}[1]{\def\@unitcode{#1}}
