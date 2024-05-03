@@ -29,18 +29,21 @@
 \renewcommand{\maketitle}{
         \begin{minipage}{0.5\linewidth}
             \begin{flushleft}
-                \includegraphics[height=0.08\textheight]{logo.png}
+                \vspace*{-0.02\textheight} % Adjust vertical spacing
+                \includegraphics[height=0.08\textheight]{logo.png} % Adjust image height
             \end{flushleft}
         \end{minipage}
         \begin{minipage}{0.5\linewidth}
+            \vspace*{-0.018\textheight} % Adjust vertical spacing
             \begin{flushright}
                 \Large{\@unitcode}\\
                 \Large{\@unitname}
             \end{flushright}
-        \end{minipage}\\
+        \end{minipage}
         \vspace{0.01\textheight}
         \hrule
 }
+
 \setcounter{secnumdepth}{6}
 \setcounter{tocdepth}{5}
 \renewcommand{\footrulewidth}{0.4pt}
