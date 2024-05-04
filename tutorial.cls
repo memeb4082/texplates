@@ -22,7 +22,7 @@
 \RequirePackage{listings}
 \RequirePackage{inconsolata}
 \RequirePackage[hidelinks]{hyperref}
-\geometry{a4paper, left=15mm,right=15mm,top=15mm,bottom=15mm}
+\geometry{a4paper, left=10mm,right=10mm,top=12.5mm,bottom=15mm}
 
 % Define the custom title page
 \renewcommand{\maketitle}{
@@ -48,6 +48,8 @@
 \renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 \fancyhf{}
+% no header
+\fancyhead{}
 \fancyfoot[L]{\@author}
 \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.4pt} % Add this line for the header rule
