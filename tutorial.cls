@@ -5,7 +5,6 @@
 % Define your commands
 \newcommand{\unitname}[1]{\def\@unitname{#1}}
 \newcommand{\unitcode}[1]{\def\@unitcode{#1}}
-\newcommand{\unitcoordinator}[1]{\def\@unitcoordinator{#1}}
 \RequirePackage{subcaption}
 \RequirePackage{glossaries}
 \RequirePackage{derivative}
@@ -49,9 +48,7 @@
 \renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\@unitname}
-\fancyhead[R]{\nouppercase{\leftmark}}
-\fancyfoot[L]{\@unitcoordinator}
+\fancyfoot[L]{\@author}
 \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.4pt} % Add this line for the header rule
 
