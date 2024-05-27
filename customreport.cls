@@ -38,7 +38,10 @@
 % Define the custom title page
 \renewcommand{\maketitle}{
     \begin{titlepage}
-        \vspace*{\fill} % Push everything to the top
+        \ifdefined\@executivesummary
+        \else
+            \vspace*{\fill} % Push everything to the top
+        \fi
         \begin{flushleft}
             Queensland University of Technology\\
             \rule{\linewidth}{0.5pt}
@@ -48,17 +51,24 @@
         \Large{\@unitname}
         \rule{\linewidth}{2pt}\\
         \small{\textit{\@unitcoordinator}}\\
-        \vspace{1cm}
-        \@author\\
-        \vspace{0.6cm}
-        \today
+        
         \ifdefined\@executivesummary
             \begin{flushleft}
+                \vspace{1cm}
+                \large
+                \textbf{Author: } \@author \hspace{0.2cm}\\
+                \textbf{Submitted: } \today\\
+                \vspace{1cm}
                 \Large{\textbf{Executive Summary}}\\
                 \small
                 \vspace{0.5cm}
                 \@executivesummary
             \end{flushleft}
+        \else
+            \vspace{1cm}
+            \@author\\
+            \vspace{0.6cm}
+            \today
         \fi
         \vspace{\fill} % Push everything to the bottom
     \end{titlepage}
