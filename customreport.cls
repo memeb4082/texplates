@@ -1,12 +1,14 @@
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{custombook}[2014/08/16 Example LaTeX class]
+\ProvidesClass{customreport}[2014/08/16 Example LaTeX class]
 
 \LoadClass[oneside,12pt]{book}
-% Define your commands
+
 \newcommand{\unitname}[1]{\def\@unitname{#1}}
 \newcommand{\unitcode}[1]{\def\@unitcode{#1}}
+\newcommand{\authorfooter}[1]{\def\@authorfooter{#1}}
 \newcommand{\unitcoordinator}[1]{\def\@unitcoordinator{#1}}
+\newcommand{\executivesummary}[1]{\def\@executivesummary{#1}}
 \RequirePackage{subcaption}
 \RequirePackage{glossaries}
 \RequirePackage{derivative}
@@ -23,6 +25,14 @@
 \RequirePackage{booktabs}
 \RequirePackage{listings}
 \RequirePackage[hidelinks]{hyperref}
+\RequirePackage{biblatex}[style=ieeetr, sorting=none, backend=biber]
+
+\ifdefined\@authorfooter
+    \authorfooter{\@authorfooter}
+\else
+    \authorfooter{\@author}
+\fi
+
 \geometry{a4paper, left=10mm,right=10mm,top=15mm,bottom=15mm}
 
 % Define the custom title page
@@ -42,6 +52,14 @@
         \@author\\
         \vspace{0.6cm}
         \today
+        \ifdefined\@executivesummary
+            \begin{flushleft}
+                \Large{\textbf{Executive Summary}}\\
+                \small
+                \vspace{0.5cm}
+                \@executivesummary
+            \end{flushleft}
+        \fi
         \vspace{\fill} % Push everything to the bottom
     \end{titlepage}
 }
@@ -52,9 +70,8 @@
 \fancyhf{}
 \fancyhead[L]{\@unitname}
 \fancyhead[R]{\nouppercase{\leftmark}}
-\fancyfoot[L]{\@unitcoordinator}
+\fancyfoot[L]{\@authorfooter}
 \fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.4pt} % Add this line for the header rule
 
 \endinput
-
